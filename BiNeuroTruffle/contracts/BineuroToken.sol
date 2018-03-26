@@ -69,14 +69,11 @@ contract BineuroToken is Ownable { //ERC - 20 token contract
   string public constant symbol = "BNR";
   string public constant name = "BiNeuro";
   uint8 public constant decimals = 3;
-  uint256 _totalSupply = (uint256)(650000000).mul((uint256)(10).pow(decimals));
+  uint256 _totalSupply = (uint256)(850000000).mul((uint256)(10).pow(decimals));
 
-  // Owner of this contract
-  address private owner;
   function getOwner()public view returns(address) {
     return owner;
   }
-  
 
   // Balances for each account
   mapping(address => uint256) balances;

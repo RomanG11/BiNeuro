@@ -127,16 +127,16 @@ contract Crowdsale is Ownable{
   uint tokenPrice = 0.0001 ether;
 
   // Ico constants
-  uint public icoStart = 1519034400; //02/19/2018 1519034400
-  uint public icoFinish = 1521453600; //03/19/2018 
+  uint public icoStart = 1522144800; //27.03.2018  12:00 UTC+2
+  uint public icoFinish = 1528156800; //27.03.2018  12:00 UTC+2
 
-  uint public maxCap = 27000 ether;
+  uint public maxCap = 47000000 ether;
 
   //Owner can change end date
   function changeIcoFinish (uint _newDate) public onlyOwner {
     icoFinish = _newDate;
   }
-  
+
   //check is now ICO
   function isIco(uint _time) public view returns (bool){
     if((icoStart <= _time) && (_time < icoFinish)){
